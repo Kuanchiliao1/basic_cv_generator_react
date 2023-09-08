@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Section>
+      <Section  title='General Info'>
         <Form
           className='form'
           title='General Info'
@@ -24,12 +24,19 @@ function App() {
           </ListInput>
         </Form>
       </Section>
-      <Section crudEnabled={true}>
+      <Section crudEnabled={true} title='Education'>
         <Form
           className='form'
           title='Education'
         >
           <BasicTextInput type='text' labelName='School name' />
+          <DateRange></DateRange>
+        </Form>
+      </Section>
+      <Section crudEnabled={true} title='Experience'>
+        <Form>
+          <BasicTextInput type='text' labelName='Company name' />
+          <BasicTextInput type='text' labelName='Job title' />
           <DateRange></DateRange>
         </Form>
       </Section>
