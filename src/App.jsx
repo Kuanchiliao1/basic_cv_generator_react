@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import Section from './components/Section'
+import GeneralForm from './components/forms/GeneralForm'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Section>
+      <GeneralForm />
+      {/* <Section>
         <Form>
           <Input />
           <Input />
@@ -22,7 +24,7 @@ function App() {
         <ExperienceForm>
           
         </ExperienceForm>
-      </Section>
+      </Section> */}
     </>
   )
 }
