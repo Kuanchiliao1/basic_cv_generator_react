@@ -1,5 +1,13 @@
-export default function Section({ children }) {
+export default function Section({ children, crudEnabled=false }) {
+  function handleBtn() {
+    
+  }
+
   return (
-    <div className="section">{children}</div>
+    <div className="section">
+      {crudEnabled && <button onClick={() => handleBtn()}>Add</button>}
+      {children}
+      {crudEnabled && <button>Remove</button>}
+    </div>
   )
 }
