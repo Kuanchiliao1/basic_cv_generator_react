@@ -6,6 +6,7 @@ html {box-sizing: border-box;}
   display: flex;
   flex-direction: column;
   align-items: start;
+  width: 35%;
 }
 
 /* Utility */
@@ -15,4 +16,8 @@ html {box-sizing: border-box;}
 
 .column {
   flex-direction: column;
+}
+
+.form {
+  max-width: 30rem;
 }
