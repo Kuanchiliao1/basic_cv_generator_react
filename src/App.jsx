@@ -1,14 +1,21 @@
 import { useState } from 'react'
 import './App.css'
 import Section from './components/Section'
-import GeneralForm from './components/forms/GeneralForm'
+import Form from './components/forms/Form'
+import BasicTextInput from './components/inputs/BasicTextInput'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <GeneralForm />
+      <Form
+        title='General Info'
+      >
+        <BasicTextInput type='text' label='name' />
+        <BasicTextInput type='text' label='email' />
+        <BasicTextInput stuff='something' type='tel' label='phone' />
+      </Form>
       {/* <Section>
         <Form>
           <Input />
