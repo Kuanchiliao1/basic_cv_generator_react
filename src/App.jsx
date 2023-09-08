@@ -4,6 +4,7 @@ import Section from './components/Section'
 import Form from './components/forms/Form'
 import BasicTextInput from './components/inputs/BasicTextInput'
 import ListInput from './components/inputs/ListInput'
+import DateRange from './components/inputs/DateRange'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,15 @@ function App() {
           <ListInput>
             {['testing', 'stuff']}
           </ListInput>
+        </Form>
+      </Section>
+      <Section crudEnabled={true}>
+        <Form
+          className='form'
+          title='Education'
+        >
+          <BasicTextInput type='text' labelName='School name' />
+          <DateRange></DateRange>
         </Form>
       </Section>
       {/* <Section>
