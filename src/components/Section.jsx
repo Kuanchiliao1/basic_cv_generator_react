@@ -1,13 +1,22 @@
-export default function Section({ children, crudEnabled=false }) {
-  function handleBtn() {
-    
+import {useState} from 'react'
+
+export default function Section({ children, crudEnabled=false}) {
+  const [forms, setForms] = useState([])
+
+  function handleAddForm() {
+    setForms(prevForms => [...prevForms, children])
+  }
+
+  function handleRemoveForm() {
+    setForms(prevForms => [...prevForms])
   }
 
   return (
     <div className="section">
-      {crudEnabled && <button onClick={() => handleBtn()}>Add</button>}
+      {crudEnabled && <button onClick={() => handleAddForm()}>Add</button>}
       {children}
-      {crudEnabled && <button>Remove</button>}
+      {forms}
+      {crudEnabled && <button onClick={() => handleRemoveForm()}>Remove</button>}
     </div>
   )
 }
