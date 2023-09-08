@@ -1,8 +1,8 @@
-export default function BasicTextInput({stuff, ...rest}) {
+export default function BasicTextInput({stuff, labelName, ...rest}) {
   return (
     <>
+      <label htmlFor="">{labelName}</label>
       <input type="text" {...rest} />
-      <label htmlFor="">testing</label>
     </>
   )
 }
