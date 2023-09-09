@@ -4,11 +4,13 @@ import { allFormsDataContext } from "../App"
 export default function CV() {
   // {"general_info":{},"education":[{}],"experience":[{}]}
   let {allFormsData} = useContext(allFormsDataContext)
-  console.log(allFormsData['general_info'].name)
+  const {name, email, phone} = allFormsData.general_info
   
   return (
     <div className='cv-container'>
-      {allFormsData['general_info'].name}
+      <p>{name}</p>
+      <p>{email}</p>
+      <p>{phone}</p>
     </div>
   )
 }
