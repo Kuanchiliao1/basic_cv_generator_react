@@ -10,10 +10,10 @@ import CV from './components/CV'
 let allFormsDataContext = createContext()
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [allFormsData, setAllFormsData] = useState({general_info: {name: ''}, education: [{}], experience: [{}]})
 
   return (
-    <allFormsDataContext.Provider value={{general_info: {}, education: [{}], experience: [{}]}}>
+    <allFormsDataContext.Provider value={{allFormsData, setAllFormsData}}>
       <div className='main-container'>
         <div className="section-container">
           <Section  title='General Info'>
@@ -32,7 +32,7 @@ function App() {
           <Section crudEnabled={true} title='Education'>
             <Form
               className='form'
-              title='Education'
+              title={'Education'}
             >
               <BasicTextInput type='text' labelName='School name' />
               <DateRange></DateRange>
@@ -47,7 +47,7 @@ function App() {
           </Section>
         </div>
         <CV>
-        
+
         </CV>
       </div>
       {/* <Section>
