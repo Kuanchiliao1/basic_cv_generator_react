@@ -19,11 +19,10 @@ function App() {
           <Section  title='General Info'>
             <Form
               className='form'
-              title='General Info'
             >
-              <BasicTextInput type='text' labelName='Name' />
-              <BasicTextInput type='text' labelName='Email' />
-              <BasicTextInput stuff='something' type='tel' labelName='Phone' />
+              <BasicTextInput title='General Info' type='text' labelName='Name' />
+              <BasicTextInput title='General Info' type='text' labelName='Email' />
+              <BasicTextInput title='General Info' stuff='something' type='tel' labelName='Phone' />
               <ListInput>
                 {['testing', 'stuff']}
               </ListInput>
@@ -32,7 +31,6 @@ function App() {
           <Section crudEnabled={true} title='Education'>
             <Form
               className='form'
-              title={'Education'}
             >
               <BasicTextInput type='text' labelName='School name' />
               <DateRange></DateRange>
