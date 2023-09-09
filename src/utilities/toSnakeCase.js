@@ -1,3 +1,3 @@
-function toSnakeCase(str) {
+export default function toSnakeCase(str) {
   return str.toLowerCase().split(' ').join('_')
 }
