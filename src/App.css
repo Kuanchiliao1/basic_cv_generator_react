@@ -9,6 +9,11 @@ html {box-sizing: border-box;}
   width: 35%;
 }
 
+.section-container {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Utility */
 .flex {
   display: flex;
@@ -20,4 +25,8 @@ html {box-sizing: border-box;}
 
 .form {
   max-width: 30rem;
+}
+
+.cv-container {
+  border: solid pink 5px;
 }
