@@ -10,7 +10,7 @@ import CV from './components/CV'
 let allFormsDataContext = createContext()
 
 function App() {
-  const [allFormsData, setAllFormsData] = useState({general_info: {name: ''}, education: [{}], experience: [{}]})
+  const [allFormsData, setAllFormsData] = useState({general_info: [{}], education: [{}], experience: [{}]})
 
   return (
     <allFormsDataContext.Provider value={{allFormsData, setAllFormsData}}>
@@ -32,7 +32,7 @@ function App() {
             <Form
               className='form'
             >
-              <BasicTextInput type='text' labelName='School name' />
+              <BasicTextInput title='Education' type='text' labelName='School name' />
               <DateRange></DateRange>
             </Form>
           </Section>
