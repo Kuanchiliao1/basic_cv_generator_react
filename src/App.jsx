@@ -31,15 +31,16 @@ function App() {
           <Section crudEnabled={true} title='Education'>
             <Form
               className='form'
+              formIndex={0}
             >
-              <BasicTextInput title='Education' type='text' labelName='School name' />
+              <BasicTextInput formIndex={0} title='Education' type='text' labelName='School name' />
               <DateRange></DateRange>
             </Form>
           </Section>
           <Section crudEnabled={true} title='Experience'>
             <Form>
-              <BasicTextInput type='text' labelName='Company name' />
-              <BasicTextInput type='text' labelName='Job title' />
+              <BasicTextInput formIndex={0} type='text' labelName='Company name' />
+              <BasicTextInput formIndex={0} type='text' labelName='Job title' />
               <DateRange></DateRange>
             </Form>
           </Section>
