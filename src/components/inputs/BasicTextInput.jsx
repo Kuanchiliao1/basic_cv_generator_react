@@ -29,8 +29,6 @@ export default function BasicTextInput({
         }),
       };
     });
-    console.log(e.target.value);
-    console.log(allFormsData);
   };
 
   return (
