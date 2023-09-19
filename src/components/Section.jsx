@@ -1,10 +1,13 @@
-import {useState} from 'react'
+import {useState, cloneElement} from 'react'
 
 export default function Section({ children, crudEnabled=false, title}) {
   const [extraForms, setExtraForms] = useState([])
 
   function handleAddForm() {
-    setExtraForms(prevForms => [...prevForms, children])
+    const formIndex = extraForms.length + 1
+    const form = cloneElement(children, {formIndex: formIndex})
+    console.log('children', children)
+    setExtraForms(prevForms => [...prevForms, form])
   }
 
   function handleRemoveForm() {
